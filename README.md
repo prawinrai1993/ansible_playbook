@@ -1,2 +1,2 @@
 # ansible_playbook
-ansible scripts
+ansible scripts for update automation
