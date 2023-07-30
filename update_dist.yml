@@ -5,9 +5,11 @@
 # Upgrade RHEL family OS packages
     - name: Upgrade RHEL Family OS packages
       yum:
+        update_cache: yes
         name: '*'
         state: latest
-      when: ansible_os_family == "RedHat"
+      when: ansible_os_family == "CentOs"
+
     - name: Update apt repo and cache on all Debian/Ubuntu boxes
       apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
       when: ansible_os_family == "Debian"
